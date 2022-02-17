@@ -1,13 +1,15 @@
-# Desafio Capgemini
+# Desafio Capgemini  
 
-|   | ![](src/main/resources/assets/academiacapgemini.png) |  ![](src/main/resources/assets/programador.png) |
-|---|---|---|
+| ![](src/main/resources/assets/academiacapgemini.png) |  ![](src/main/resources/assets/programador.png) |
+|---|---|  
 
-
-Este repositório foi usado para resolução do desafio 
+  
+<p>Este repositório foi usado para resolução do desafio 
 proposto para ingresso na terceira etapa do processo 
-seletivo para a Academia Java.
----
+seletivo para a Academia Java.</p>
+
+---  
+
 ## Tecnologias utilizadas:
 Minha proposta se baseia na utilização máxima de recursos da própria
  linguagem, evitando a utilização de *libs* de terceiros com o intuito 
