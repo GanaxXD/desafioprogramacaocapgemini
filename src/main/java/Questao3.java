@@ -1,10 +1,30 @@
 import javax.swing.*;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Questao3 {
     public static void main(String[] args) {
         String palavraDigitada = "";
+        boolean loop = true;
+        
+        String regex = "[a-zA-Z]";
+        Pattern p = Pattern.compile(regex);
+        
         palavraDigitada= JOptionPane.showInputDialog("Digite uma palavra: ");
+        Matcher m = p.matcher(palavraDigitada);
+        
+        if(!m.find()){
+            //Verificando se a palavra é válida
+            while(loop==true){
+                if(m.find()){
+                    loop = false;
+                }
+                palavraDigitada= JOptionPane.showInputDialog("Palavra inválida! \nDigite uma palavra: ");
+                m = p.matcher(palavraDigitada);
+            }
+        }
+        
         int quantidadeAnagrama = 0;
         List subStrings = new ArrayList<>();//Lista de substrings formadas com as letras da palavraDigitada.
         
