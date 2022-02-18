@@ -28,3 +28,12 @@ e abra o projeto na IDE que desejar. A sugestão é o InteliJ ou o Eclipse.
 Depois de aberto o projeto, basta rodar a classe correspondente a 
  cada questão do desafio, e o sistema executará conforme solicitado 
 no desafio.
+
+#### Nota:
+* No caso dos testes, caso você esteja utilizando 
+o InteliJ, talvez seja necessário adicionar a *lib*
+ do JUnit5. Para mais informações, acesse: https://www.jetbrains.com/help/idea/junit.html
+
+  
+* No caso do eclipse, por padrão, a IDE já trás o JUnit5 
+em seu ambiente principal. Caso necessite de ajuda, acesse: https://www.testingdocs.com/adding-junit5-library-to-a-project/

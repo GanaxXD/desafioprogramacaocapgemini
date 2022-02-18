@@ -22,6 +22,7 @@ public class Questao3 {
             } else {
                 quantidadeAnagrama++;
             }
+            
         }
         //ifailuhkqq
         subStrings.clear();

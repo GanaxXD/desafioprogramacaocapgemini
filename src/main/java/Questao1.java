@@ -16,6 +16,7 @@ public class Questao1 {
         * Caso o usuário não digite um valor válido, ele ficará
         * preso nesse loop até satisfazer a condição.
          */
+        System.out.println(entrada.matches("[0-9]+"));
         while(saida==false){
             entrada = JOptionPane.showInputDialog("Digte um valor: ");
             if(!entrada.matches("[0-9]+") || Integer.parseInt(entrada) < 0){
