@@ -1,45 +1,53 @@
+package br.com.pedro.funcoes;
+
 import javax.swing.*;
 
-public class Questao1 {
+public class FuncoesQuestao1 {
     
+    public FuncoesQuestao1() {
+    }
     
-    public static void main(String[] args) {
-        //Definindo variaveis utilizadas
-        int numero=0; //número inserido pelo usuário
-        boolean saida = false; //auxiliar de validação do número digitado
-        String entrada = ""; //valor digitado pelo usuário em string
-        String resultado = "";//resultado desejado
-        
-        /*
-        * Verifica se o valor informado pelo usuário é válido.
-        * Só são aceitos valores inteiros maiores que 0.
-        * Caso o usuário não digite um valor válido, ele ficará
-        * preso nesse loop até satisfazer a condição.
-         */
-        System.out.println(entrada.matches("[0-9]+"));
+    /*
+     * Verifica se o valor informado pelo usuário é válido.
+     * Só são aceitos valores inteiros maiores que 0.
+     * Caso o usuário não digite um valor válido, ele ficará
+     * preso nesse loop até satisfazer a condição.
+     *
+     * @param: String numero_digitado
+     * @return int numero validado
+     */
+    public static int validaNumeroDigitado(String entrada){
+        int numero = 0;
+        boolean saida = false;
         while(saida==false){
-            entrada = JOptionPane.showInputDialog("Digte um valor: ");
             if(!entrada.matches("[0-9]+") || Integer.parseInt(entrada) < 0){
                 JOptionPane.showMessageDialog(null,"Voce digitou um valor invalido. Apenas numeros sao aceitos.");
+                entrada = JOptionPane.showInputDialog("Digte um valor: ");
                 saida = false;
             } else {
                 numero = Integer.parseInt(entrada);
                 saida = true;
             }
         }
-        
-        /*
-        * Laço para iterar o número de vezes igual ao digitado pelo usuário.
-        * Nele, são contabilizados os espaços em branco necessários
-        * da escada, além da concatenação destes espações com os asteríscos,
-        *  fundamentais para seguir a regra imposta.
-        *
-        *
-        * Variáveis usadas:
-        * int espacos: indica quantos espaços cada linha da escada usará
-        * int linha: indica qual linha da escada está sendo desenhada
-        *
-         */
+        return numero;
+    }
+    
+    
+    /*
+     * Função usada para desenhar a escada. Nela, usamos um
+     * Laço para iterar o número de vezes igual ao digitado pelo usuário.
+     * Nele, são contabilizados os espaços em branco necessários
+     * da escada, além da concatenação destes espações com os asteríscos,
+     *  fundamentais para seguir a regra imposta.
+     *
+     *
+     * Variáveis usadas:
+     * int espacos: indica quantos espaços cada linha da escada usará
+     * int linha: indica qual linha da escada está sendo desenhada
+     *
+     */
+    public static void desenhaEscada(int numero){
+        String resultado = "";
         for (int linha = 0; linha < numero; linha++){
             int espacos = 0;
             //verificando se é a última linha
@@ -52,8 +60,8 @@ public class Questao1 {
                 }
                 System.out.println(resultado);
                 resultado="";
-                
-            //desenhando as outras linhas da escada
+            
+                //desenhando as outras linhas da escada
             } else {
                 espacos=0;
                 while(espacos<=numero){
@@ -70,5 +78,4 @@ public class Questao1 {
             }
         }
     }
-    
 }

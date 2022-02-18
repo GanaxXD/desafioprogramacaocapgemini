@@ -1,3 +1,5 @@
+package br.com.pedro.questoes;
+
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

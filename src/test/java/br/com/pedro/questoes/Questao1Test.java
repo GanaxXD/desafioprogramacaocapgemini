@@ -1,8 +1,6 @@
+package br.com.pedro.questoes;
+
 import org.junit.jupiter.api.Test;
-
-import java.util.IllegalFormatException;
-import java.util.regex.PatternSyntaxException;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class Questao1Test {

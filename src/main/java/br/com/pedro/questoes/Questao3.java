@@ -1,3 +1,5 @@
+package br.com.pedro.questoes;
+
 import javax.swing.*;
 import java.util.*;
 import java.util.regex.Matcher;
@@ -13,9 +15,9 @@ public class Questao3 {
         
         palavraDigitada= JOptionPane.showInputDialog("Digite uma palavra: ");
         Matcher m = p.matcher(palavraDigitada);
-        
+    
+        //Verificando se a palavra é válida
         if(!m.find()){
-            //Verificando se a palavra é válida
             while(loop==true){
                 if(m.find()){
                     loop = false;
